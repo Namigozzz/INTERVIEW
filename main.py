@@ -14,9 +14,12 @@ def is_balanced(input_string):
             stack.push(symbol)
         else:
             if stack.is_empty() or brackets[stack.pop()] != symbol:
-                return False
+                return "Несбалансированно"
 
-    return stack.is_empty()
+    if stack.is_empty():
+        return "Сбалансированно"
+    else:
+        return "Несбалансированно"
 
 
 # Test 1
@@ -36,4 +39,5 @@ print(stack.size())
 assert stack.is_empty() == True
 
 # Test 2
-assert is_balanced("(({}))") == True
+input_string = input()
+assert is_balanced(input_string) == "Сбалансированно"
