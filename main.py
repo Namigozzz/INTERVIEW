@@ -36,7 +36,6 @@ assert stack.peek() == 3
 assert stack.pop() == 3
 assert stack.pop() == 2
 assert stack.pop() == 1
-print(stack.size())
 assert stack.is_empty() == True
 
 # Test 2
